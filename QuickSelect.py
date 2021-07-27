@@ -12,11 +12,11 @@ def quick_select(arr,k):
         else:
             mid.append(arr[i]) # 피봇이면 중간
 
-    if k<len(left):
+    if k<len(left):    # 찾을 번째가 왼쪽에 있음
         return quick_select(left,k)
-    elif k<len(left)+len(mid):
+    elif k<len(left)+len(mid):      # 찾을 번째가 중간
         return mid[0]
-    else:
+    else:              # 찾을 번째가 오른쪽에 있음
         return quick_select(right,k-len(left)-len(mid))
 
 arr=[3,5,1,2,9,6,4,7,5]
